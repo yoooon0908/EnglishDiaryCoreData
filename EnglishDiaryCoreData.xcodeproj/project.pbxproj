@@ -15,6 +15,8 @@
 		E9EB2AB01C7AD3E4005515A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9EB2AAE1C7AD3E4005515A4 /* LaunchScreen.storyboard */; };
 		E9EB2ABB1C7AD3E4005515A4 /* EnglishDiaryCoreDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EB2ABA1C7AD3E4005515A4 /* EnglishDiaryCoreDataTests.swift */; };
 		E9EB2AC61C7AD3E4005515A4 /* EnglishDiaryCoreDataUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EB2AC51C7AD3E4005515A4 /* EnglishDiaryCoreDataUITests.swift */; };
+		E9EB2AD91C7AD76D005515A4 /* Data+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EB2AD71C7AD76D005515A4 /* Data+CoreDataProperties.swift */; };
+		E9EB2ADA1C7AD76D005515A4 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EB2AD81C7AD76D005515A4 /* Data.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		E9EB2AC11C7AD3E4005515A4 /* EnglishDiaryCoreDataUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EnglishDiaryCoreDataUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9EB2AC51C7AD3E4005515A4 /* EnglishDiaryCoreDataUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnglishDiaryCoreDataUITests.swift; sourceTree = "<group>"; };
 		E9EB2AC71C7AD3E4005515A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9EB2AD71C7AD76D005515A4 /* Data+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		E9EB2AD81C7AD76D005515A4 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,8 @@
 		E9EB2A961C7AD3E4005515A4 = {
 			isa = PBXGroup;
 			children = (
+				E9EB2AD71C7AD76D005515A4 /* Data+CoreDataProperties.swift */,
+				E9EB2AD81C7AD76D005515A4 /* Data.swift */,
 				E9EB2AA11C7AD3E4005515A4 /* EnglishDiaryCoreData */,
 				E9EB2AB91C7AD3E4005515A4 /* EnglishDiaryCoreDataTests */,
 				E9EB2AC41C7AD3E4005515A4 /* EnglishDiaryCoreDataUITests */,
@@ -260,6 +266,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9EB2AA51C7AD3E4005515A4 /* ViewController.swift in Sources */,
+				E9EB2ADA1C7AD76D005515A4 /* Data.swift in Sources */,
+				E9EB2AD91C7AD76D005515A4 /* Data+CoreDataProperties.swift in Sources */,
 				E9EB2AAB1C7AD3E4005515A4 /* EnglishDiaryCoreData.xcdatamodeld in Sources */,
 				E9EB2AA31C7AD3E4005515A4 /* AppDelegate.swift in Sources */,
 			);
