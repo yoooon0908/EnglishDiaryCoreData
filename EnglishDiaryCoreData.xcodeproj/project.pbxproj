@@ -1,0 +1,522 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E9EB2AA31C7AD3E4005515A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EB2AA21C7AD3E4005515A4 /* AppDelegate.swift */; };
+		E9EB2AA51C7AD3E4005515A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EB2AA41C7AD3E4005515A4 /* ViewController.swift */; };
+		E9EB2AA81C7AD3E4005515A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9EB2AA61C7AD3E4005515A4 /* Main.storyboard */; };
+		E9EB2AAB1C7AD3E4005515A4 /* EnglishDiaryCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E9EB2AA91C7AD3E4005515A4 /* EnglishDiaryCoreData.xcdatamodeld */; };
+		E9EB2AAD1C7AD3E4005515A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9EB2AAC1C7AD3E4005515A4 /* Assets.xcassets */; };
+		E9EB2AB01C7AD3E4005515A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9EB2AAE1C7AD3E4005515A4 /* LaunchScreen.storyboard */; };
+		E9EB2ABB1C7AD3E4005515A4 /* EnglishDiaryCoreDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EB2ABA1C7AD3E4005515A4 /* EnglishDiaryCoreDataTests.swift */; };
+		E9EB2AC61C7AD3E4005515A4 /* EnglishDiaryCoreDataUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EB2AC51C7AD3E4005515A4 /* EnglishDiaryCoreDataUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E9EB2AB71C7AD3E4005515A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E9EB2A971C7AD3E4005515A4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E9EB2A9E1C7AD3E4005515A4;
+			remoteInfo = EnglishDiaryCoreData;
+		};
+		E9EB2AC21C7AD3E4005515A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E9EB2A971C7AD3E4005515A4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E9EB2A9E1C7AD3E4005515A4;
+			remoteInfo = EnglishDiaryCoreData;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E9EB2A9F1C7AD3E4005515A4 /* EnglishDiaryCoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnglishDiaryCoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9EB2AA21C7AD3E4005515A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E9EB2AA41C7AD3E4005515A4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E9EB2AA71C7AD3E4005515A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E9EB2AAA1C7AD3E4005515A4 /* EnglishDiaryCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EnglishDiaryCoreData.xcdatamodel; sourceTree = "<group>"; };
+		E9EB2AAC1C7AD3E4005515A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E9EB2AAF1C7AD3E4005515A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E9EB2AB11C7AD3E4005515A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9EB2AB61C7AD3E4005515A4 /* EnglishDiaryCoreDataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EnglishDiaryCoreDataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9EB2ABA1C7AD3E4005515A4 /* EnglishDiaryCoreDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnglishDiaryCoreDataTests.swift; sourceTree = "<group>"; };
+		E9EB2ABC1C7AD3E4005515A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9EB2AC11C7AD3E4005515A4 /* EnglishDiaryCoreDataUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EnglishDiaryCoreDataUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9EB2AC51C7AD3E4005515A4 /* EnglishDiaryCoreDataUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnglishDiaryCoreDataUITests.swift; sourceTree = "<group>"; };
+		E9EB2AC71C7AD3E4005515A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E9EB2A9C1C7AD3E4005515A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9EB2AB31C7AD3E4005515A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9EB2ABE1C7AD3E4005515A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E9EB2A961C7AD3E4005515A4 = {
+			isa = PBXGroup;
+			children = (
+				E9EB2AA11C7AD3E4005515A4 /* EnglishDiaryCoreData */,
+				E9EB2AB91C7AD3E4005515A4 /* EnglishDiaryCoreDataTests */,
+				E9EB2AC41C7AD3E4005515A4 /* EnglishDiaryCoreDataUITests */,
+				E9EB2AA01C7AD3E4005515A4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E9EB2AA01C7AD3E4005515A4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E9EB2A9F1C7AD3E4005515A4 /* EnglishDiaryCoreData.app */,
+				E9EB2AB61C7AD3E4005515A4 /* EnglishDiaryCoreDataTests.xctest */,
+				E9EB2AC11C7AD3E4005515A4 /* EnglishDiaryCoreDataUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E9EB2AA11C7AD3E4005515A4 /* EnglishDiaryCoreData */ = {
+			isa = PBXGroup;
+			children = (
+				E9EB2AA21C7AD3E4005515A4 /* AppDelegate.swift */,
+				E9EB2AA41C7AD3E4005515A4 /* ViewController.swift */,
+				E9EB2AA61C7AD3E4005515A4 /* Main.storyboard */,
+				E9EB2AAC1C7AD3E4005515A4 /* Assets.xcassets */,
+				E9EB2AAE1C7AD3E4005515A4 /* LaunchScreen.storyboard */,
+				E9EB2AB11C7AD3E4005515A4 /* Info.plist */,
+				E9EB2AA91C7AD3E4005515A4 /* EnglishDiaryCoreData.xcdatamodeld */,
+			);
+			path = EnglishDiaryCoreData;
+			sourceTree = "<group>";
+		};
+		E9EB2AB91C7AD3E4005515A4 /* EnglishDiaryCoreDataTests */ = {
+			isa = PBXGroup;
+			children = (
+				E9EB2ABA1C7AD3E4005515A4 /* EnglishDiaryCoreDataTests.swift */,
+				E9EB2ABC1C7AD3E4005515A4 /* Info.plist */,
+			);
+			path = EnglishDiaryCoreDataTests;
+			sourceTree = "<group>";
+		};
+		E9EB2AC41C7AD3E4005515A4 /* EnglishDiaryCoreDataUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E9EB2AC51C7AD3E4005515A4 /* EnglishDiaryCoreDataUITests.swift */,
+				E9EB2AC71C7AD3E4005515A4 /* Info.plist */,
+			);
+			path = EnglishDiaryCoreDataUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E9EB2A9E1C7AD3E4005515A4 /* EnglishDiaryCoreData */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E9EB2ACA1C7AD3E4005515A4 /* Build configuration list for PBXNativeTarget "EnglishDiaryCoreData" */;
+			buildPhases = (
+				E9EB2A9B1C7AD3E4005515A4 /* Sources */,
+				E9EB2A9C1C7AD3E4005515A4 /* Frameworks */,
+				E9EB2A9D1C7AD3E4005515A4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EnglishDiaryCoreData;
+			productName = EnglishDiaryCoreData;
+			productReference = E9EB2A9F1C7AD3E4005515A4 /* EnglishDiaryCoreData.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E9EB2AB51C7AD3E4005515A4 /* EnglishDiaryCoreDataTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E9EB2ACD1C7AD3E4005515A4 /* Build configuration list for PBXNativeTarget "EnglishDiaryCoreDataTests" */;
+			buildPhases = (
+				E9EB2AB21C7AD3E4005515A4 /* Sources */,
+				E9EB2AB31C7AD3E4005515A4 /* Frameworks */,
+				E9EB2AB41C7AD3E4005515A4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E9EB2AB81C7AD3E4005515A4 /* PBXTargetDependency */,
+			);
+			name = EnglishDiaryCoreDataTests;
+			productName = EnglishDiaryCoreDataTests;
+			productReference = E9EB2AB61C7AD3E4005515A4 /* EnglishDiaryCoreDataTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E9EB2AC01C7AD3E4005515A4 /* EnglishDiaryCoreDataUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E9EB2AD01C7AD3E4005515A4 /* Build configuration list for PBXNativeTarget "EnglishDiaryCoreDataUITests" */;
+			buildPhases = (
+				E9EB2ABD1C7AD3E4005515A4 /* Sources */,
+				E9EB2ABE1C7AD3E4005515A4 /* Frameworks */,
+				E9EB2ABF1C7AD3E4005515A4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E9EB2AC31C7AD3E4005515A4 /* PBXTargetDependency */,
+			);
+			name = EnglishDiaryCoreDataUITests;
+			productName = EnglishDiaryCoreDataUITests;
+			productReference = E9EB2AC11C7AD3E4005515A4 /* EnglishDiaryCoreDataUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E9EB2A971C7AD3E4005515A4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Hiroyo Miura";
+				TargetAttributes = {
+					E9EB2A9E1C7AD3E4005515A4 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					E9EB2AB51C7AD3E4005515A4 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = E9EB2A9E1C7AD3E4005515A4;
+					};
+					E9EB2AC01C7AD3E4005515A4 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = E9EB2A9E1C7AD3E4005515A4;
+					};
+				};
+			};
+			buildConfigurationList = E9EB2A9A1C7AD3E4005515A4 /* Build configuration list for PBXProject "EnglishDiaryCoreData" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E9EB2A961C7AD3E4005515A4;
+			productRefGroup = E9EB2AA01C7AD3E4005515A4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E9EB2A9E1C7AD3E4005515A4 /* EnglishDiaryCoreData */,
+				E9EB2AB51C7AD3E4005515A4 /* EnglishDiaryCoreDataTests */,
+				E9EB2AC01C7AD3E4005515A4 /* EnglishDiaryCoreDataUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E9EB2A9D1C7AD3E4005515A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9EB2AB01C7AD3E4005515A4 /* LaunchScreen.storyboard in Resources */,
+				E9EB2AAD1C7AD3E4005515A4 /* Assets.xcassets in Resources */,
+				E9EB2AA81C7AD3E4005515A4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9EB2AB41C7AD3E4005515A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9EB2ABF1C7AD3E4005515A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E9EB2A9B1C7AD3E4005515A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9EB2AA51C7AD3E4005515A4 /* ViewController.swift in Sources */,
+				E9EB2AAB1C7AD3E4005515A4 /* EnglishDiaryCoreData.xcdatamodeld in Sources */,
+				E9EB2AA31C7AD3E4005515A4 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9EB2AB21C7AD3E4005515A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9EB2ABB1C7AD3E4005515A4 /* EnglishDiaryCoreDataTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9EB2ABD1C7AD3E4005515A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9EB2AC61C7AD3E4005515A4 /* EnglishDiaryCoreDataUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E9EB2AB81C7AD3E4005515A4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E9EB2A9E1C7AD3E4005515A4 /* EnglishDiaryCoreData */;
+			targetProxy = E9EB2AB71C7AD3E4005515A4 /* PBXContainerItemProxy */;
+		};
+		E9EB2AC31C7AD3E4005515A4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E9EB2A9E1C7AD3E4005515A4 /* EnglishDiaryCoreData */;
+			targetProxy = E9EB2AC21C7AD3E4005515A4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E9EB2AA61C7AD3E4005515A4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E9EB2AA71C7AD3E4005515A4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E9EB2AAE1C7AD3E4005515A4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E9EB2AAF1C7AD3E4005515A4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E9EB2AC81C7AD3E4005515A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E9EB2AC91C7AD3E4005515A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E9EB2ACB1C7AD3E4005515A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = EnglishDiaryCoreData/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hiroyomiura.EnglishDiaryCoreData;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E9EB2ACC1C7AD3E4005515A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = EnglishDiaryCoreData/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hiroyomiura.EnglishDiaryCoreData;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		E9EB2ACE1C7AD3E4005515A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = EnglishDiaryCoreDataTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hiroyomiura.EnglishDiaryCoreDataTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EnglishDiaryCoreData.app/EnglishDiaryCoreData";
+			};
+			name = Debug;
+		};
+		E9EB2ACF1C7AD3E4005515A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = EnglishDiaryCoreDataTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hiroyomiura.EnglishDiaryCoreDataTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EnglishDiaryCoreData.app/EnglishDiaryCoreData";
+			};
+			name = Release;
+		};
+		E9EB2AD11C7AD3E4005515A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = EnglishDiaryCoreDataUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hiroyomiura.EnglishDiaryCoreDataUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = EnglishDiaryCoreData;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		E9EB2AD21C7AD3E4005515A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = EnglishDiaryCoreDataUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hiroyomiura.EnglishDiaryCoreDataUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = EnglishDiaryCoreData;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E9EB2A9A1C7AD3E4005515A4 /* Build configuration list for PBXProject "EnglishDiaryCoreData" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9EB2AC81C7AD3E4005515A4 /* Debug */,
+				E9EB2AC91C7AD3E4005515A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E9EB2ACA1C7AD3E4005515A4 /* Build configuration list for PBXNativeTarget "EnglishDiaryCoreData" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9EB2ACB1C7AD3E4005515A4 /* Debug */,
+				E9EB2ACC1C7AD3E4005515A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E9EB2ACD1C7AD3E4005515A4 /* Build configuration list for PBXNativeTarget "EnglishDiaryCoreDataTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9EB2ACE1C7AD3E4005515A4 /* Debug */,
+				E9EB2ACF1C7AD3E4005515A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E9EB2AD01C7AD3E4005515A4 /* Build configuration list for PBXNativeTarget "EnglishDiaryCoreDataUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9EB2AD11C7AD3E4005515A4 /* Debug */,
+				E9EB2AD21C7AD3E4005515A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E9EB2AA91C7AD3E4005515A4 /* EnglishDiaryCoreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E9EB2AAA1C7AD3E4005515A4 /* EnglishDiaryCoreData.xcdatamodel */,
+			);
+			currentVersion = E9EB2AAA1C7AD3E4005515A4 /* EnglishDiaryCoreData.xcdatamodel */;
+			path = EnglishDiaryCoreData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = E9EB2A971C7AD3E4005515A4 /* Project object */;
+}
