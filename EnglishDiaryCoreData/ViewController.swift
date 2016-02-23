@@ -5,20 +5,19 @@
 //  Created by 三浦宏予 on 2016/02/22.
 //  Copyright © 2016年 Hiroyo Miura. All rights reserved.
 //
-
 import UIKit
 import CoreData
 
 class ViewController: UIViewController {
-
     
-   
+    
+    
     
     //DBの名前
     let ENTITY_NAME = "Data"
     
     //txt1
-    let ITEM_NAME1 = "content"
+    let ITEM_NAME = "content"
     //txt2
     let ITEM_NAME2 = "title"
     //txt3
@@ -26,7 +25,7 @@ class ViewController: UIViewController {
     
     //dateはString型ではない
     let ITEM_NAME4 = "date"
- 
+    
     @IBOutlet weak var myContent: UITextView!
     @IBOutlet weak var myImage: UIImageView!
     @IBOutlet weak var myDate: UITextField!
@@ -38,8 +37,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         //データを読み込む
-//        myContent.text = readData()
-
+        //        myContent.text = readData()
+        
         readData()
     }
     
@@ -57,9 +56,7 @@ class ViewController: UIViewController {
             if (results.count > 0 ) {
                 // 検索して見つかったらアップデートする
                 let obj = results[0] as! NSManagedObject
-                let txt1 = obj.valueForKey(ITEM_NAME1) as! String
-                let txt2 = obj.valueForKey(ITEM_NAME2) as! String
-                let txt3 = obj.valueForKey(ITEM_NAME3) as! String
+                let txt = obj.valueForKey(ITEM_NAME) as! String
                 
                 obj.setValue(txtData, forKey: ITEM_NAME)
                 print("UPDATE \(txt) TO \(txtData)")
@@ -86,7 +83,7 @@ class ViewController: UIViewController {
         }
         return ret
     }
-
+    
     // データ読み込み
     func readData() -> String{
         var ret = ""
@@ -138,21 +135,21 @@ class ViewController: UIViewController {
         }
         return ret
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-  
-
+    
+    
+    
     @IBAction func tapSave(sender: UIButton) {
         writeData(myContent.text!)
         writeData(myDate.text!)
         writeData(myTitle.text!)
         
         //写真あとでエラーがでる
-//        writeData(myImage.image!)
+        // writeData(myImage.image!)
     }
     
     
@@ -172,4 +169,3 @@ class ViewController: UIViewController {
     }
     
 }
-
