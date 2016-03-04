@@ -66,6 +66,8 @@ class ViewController: UIViewController {
                 let txt1 = obj.valueForKey(ITEM_NAME1) as! String
                 let txt2 = obj.valueForKey(ITEM_NAME2) as! String
                 let txt3 = obj.valueForKey(ITEM_NAME3) as! NSDate
+                let txt4 = obj.valueForKey(ITEM_NAME4) as! String
+
                 
                 
                 
@@ -89,6 +91,7 @@ class ViewController: UIViewController {
                 print("UPDATE \(txt1) TO \(myContent.text)")
                 print("UPDATE \(txt2) TO \(myTitle.text)")
                 print("UPDATE \(txt3) TO \(myDate.text)")
+                print("UPDATE \(txt4) TO \(myDate.text)")
                 
                 
                 
@@ -106,10 +109,12 @@ class ViewController: UIViewController {
                 obj.setValue(myContent.text, forKey: "content")
                 obj.setValue(myTitle.text, forKey: "title")
                 obj.setValue(myDate.text, forKey: "date")
+                obj.setValue(myImage.image, forKey: "image")
                 
                 print("INSERT \(myContent.text)")
                 print("INSERT \(myTitle.text)")
                 print("INSERT \(myDate.text)")
+                print("INSERT \(myImage.image)")
                 
                 do {
                     try context.save()
@@ -143,14 +148,17 @@ class ViewController: UIViewController {
                 let txt1 = obj.valueForKey(ITEM_NAME1) as! String
                 let txt2 = obj.valueForKey(ITEM_NAME2) as! String
                 let txt3 = obj.valueForKey(ITEM_NAME3) as! String
+                let txt4 = obj.valueForKey(ITEM_NAME4) as! String
                 
                 print("READ:\(txt1)")
                 print("READ:\(txt2)")
                 print("READ:\(txt3)")
+                print("READ:\(txt4)")
                 
                 ret = txt1
                 ret = txt2
                 ret = txt3
+                ret = txt4
             }
         } catch let error as NSError {
             // エラー処理
@@ -175,11 +183,14 @@ class ViewController: UIViewController {
                 let obj = results[0] as! NSManagedObject
                 let txt1 = obj.valueForKey(ITEM_NAME1) as! String
                 let txt2 = obj.valueForKey(ITEM_NAME2) as! String
-                let txt3 = obj.valueForKey(ITEM_NAME3) as! String
+                let txt3 = obj.valueForKey(ITEM_NAME3) as! NSDate
+                let txt4 = obj.valueForKey(ITEM_NAME4) as! String
                 
                 print("DELETE \(txt1)")
                 print("DELETE \(txt2)")
                 print("DELETE \(txt3)")
+                print("DELETE \(txt4)")
+                
                 
                 context.deleteObject(obj)
                 appDelegate.saveContext()
