@@ -76,6 +76,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RXO-9o-dx9">
                                 <rect key="frame" x="28" y="43" width="126" height="128"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="tapImageView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e5S-da-UwT"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -96,6 +99,47 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="421" y="323"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="KTD-Lv-hEa">
+            <objects>
+                <viewController storyboardIdentifier="welcome" id="dSO-P2-IGb" customClass="SecondViewController" customModule="EnglishDiaryCoreData" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9kx-uW-Szp"/>
+                        <viewControllerLayoutGuide type="bottom" id="F7N-F4-IKO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iRe-cU-sIU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2016/01/01" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RFa-4P-Ifj">
+                                <rect key="frame" x="144" y="51" width="85" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2tf-UG-aA9">
+                                <rect key="frame" x="152" y="100" width="34" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IWf-Ky-WRs">
+                                <rect key="frame" x="20" y="44" width="105" height="94"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="myDate" destination="RFa-4P-Ifj" id="7m7-FX-ppv"/>
+                        <outlet property="myImageView" destination="IWf-Ky-WRs" id="Uy8-Kr-wWN"/>
+                        <outlet property="myTitle" destination="2tf-UG-aA9" id="u2J-B8-kaK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fxt-AD-9RV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="872" y="323"/>
         </scene>
     </scenes>
 </document>

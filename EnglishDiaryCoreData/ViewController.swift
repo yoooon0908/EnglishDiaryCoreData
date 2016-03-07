@@ -8,39 +8,42 @@
 import UIKit
 import CoreData
 
-class ViewController: UIViewController {
-    
-    
+class ViewController: UIViewController , UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     
     @IBOutlet weak var myContent: UITextView!
     @IBOutlet weak var myImage: UIImageView!
     @IBOutlet weak var myDate: UITextField!
     @IBOutlet weak var myTitle: UITextField!
     
-  
     
     //DBの名前
     let ENTITY_NAME = "Data"
-    
     //txt1
     let ITEM_NAME1 = "content"
     //txt2
     let ITEM_NAME2 = "title"
-    
-    //dateはString型ではない
-    let ITEM_NAME3 = "date"
-
     //txt3
+    let ITEM_NAME3 = "date"
+    //txt4
     let ITEM_NAME4 = "image"
+    
+    var assetURL = ""
 
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //データを読み込む
         //        myContent.text = readData()
+        //print(NSBundle.mainBundle())
+        
+        //#if DEBUG
+            print("----------------------------------");
+            print("[DEBUG]");
+            let documentsPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
+            print(documentsPath)
+            print("----------------------------------");
+        //#endif
         
         readData()
     }
@@ -56,12 +59,16 @@ class ViewController: UIViewController {
         
         do {
             let results: Array = try context.executeFetchRequest(request)
+            
+            let df = NSDateFormatter()
+            df.dateFormat = "yyyy/MM/dd"
+
             if (results.count > 0 ) {
                 // 検索して見つかったらアップデートする
                 let obj = results[0] as! NSManagedObject
                 
+                               //let ITEM_NAME3 = df.dateFromString(myDate.text!)
                 
-            
                 
                 let txt1 = obj.valueForKey(ITEM_NAME1) as! String
                 let txt2 = obj.valueForKey(ITEM_NAME2) as! String
@@ -69,29 +76,22 @@ class ViewController: UIViewController {
                 let txt4 = obj.valueForKey(ITEM_NAME4) as! String
 
                 
-                
-                
 //                obj.setValue(txtData, forKey: ITEM_NAME1)
 //                obj.setValue(txtData, fonrKey: ITEM_NAME2)
 //                obj.setValue(txtData, forKey: ITEM_NAME3)
-                
-               
 
                 
                 obj.setValue(myContent.text, forKey: "content")
                 obj.setValue(myTitle.text, forKey: "title")
-                obj.setValue(myDate.text, forKey: "date")
+                obj.setValue(df.dateFromString(myDate.text!), forKey: "date")
+                obj.setValue(myDate.text, forKey: "image")
                 
                 
-                let df = NSDateFormatter()
-                df.dateFormat = "yyy/MM/dd"
-                myDate.text = df.dateFormat
+                print("UPDATE CONTENT: \(txt1) TO \(myContent.text)")
+                print("UPDATE TITLE: \(txt2) TO \(myTitle.text)")
+                print("UPDATE DATE: \(txt3) TO \(myDate.text)")
+                print("UPDATE IMAGE: \(txt4) TO \(myImage.image)")
                 
-                
-                print("UPDATE \(txt1) TO \(myContent.text)")
-                print("UPDATE \(txt2) TO \(myTitle.text)")
-                print("UPDATE \(txt3) TO \(myDate.text)")
-                print("UPDATE \(txt4) TO \(myDate.text)")
                 
                 
                 
@@ -102,19 +102,22 @@ class ViewController: UIViewController {
                 // 見つからなかったら新規登録
                 let entity: NSEntityDescription! = NSEntityDescription.entityForName(ENTITY_NAME, inManagedObjectContext: context)
                 let obj = Data(entity: entity, insertIntoManagedObjectContext: context)
+                
 //                obj.setValue(txtData, forKey: ITEM_NAME1)
 //                obj.setValue(txtData, forKey: ITEM_NAME2)
 //                obj.setValue(txtData, forKey: ITEM_NAME3)
                 
                 obj.setValue(myContent.text, forKey: "content")
                 obj.setValue(myTitle.text, forKey: "title")
-                obj.setValue(myDate.text, forKey: "date")
-                obj.setValue(myImage.image, forKey: "image")
+                obj.setValue(df.dateFromString(myDate.text!), forKey: "date")
+                obj.setValue(assetURL, forKey: "image")
                 
-                print("INSERT \(myContent.text)")
-                print("INSERT \(myTitle.text)")
-                print("INSERT \(myDate.text)")
-                print("INSERT \(myImage.image)")
+                print("INSERT CONTENT: \(myContent.text)")
+                print("INSERT TITLE: \(myTitle.text)")
+                print("INSERT DATE: \(myDate.text)")
+                print("INSERT IMAGE: \(myImage.image)")
+                
+               
                 
                 do {
                     try context.save()
@@ -147,18 +150,20 @@ class ViewController: UIViewController {
                 let obj = results[0] as! NSManagedObject
                 let txt1 = obj.valueForKey(ITEM_NAME1) as! String
                 let txt2 = obj.valueForKey(ITEM_NAME2) as! String
-                let txt3 = obj.valueForKey(ITEM_NAME3) as! String
+                let txt3 = obj.valueForKey(ITEM_NAME3) as! NSDate
                 let txt4 = obj.valueForKey(ITEM_NAME4) as! String
                 
-                print("READ:\(txt1)")
-                print("READ:\(txt2)")
-                print("READ:\(txt3)")
-                print("READ:\(txt4)")
+                print("READ CONTENT:\(txt1)")
+                print("READ TITLE:\(txt2)")
+                print("READ DATE:\(txt3)")
+                print("READ IMAGE:\(txt4)")
                 
-                ret = txt1
-                ret = txt2
-                ret = txt3
-                ret = txt4
+               
+//                ret = txt1
+//                ret = txt2
+//                ret = txt3
+//                ret = txt4
+                
             }
         } catch let error as NSError {
             // エラー処理
@@ -186,12 +191,12 @@ class ViewController: UIViewController {
                 let txt3 = obj.valueForKey(ITEM_NAME3) as! NSDate
                 let txt4 = obj.valueForKey(ITEM_NAME4) as! String
                 
-                print("DELETE \(txt1)")
-                print("DELETE \(txt2)")
-                print("DELETE \(txt3)")
-                print("DELETE \(txt4)")
+                print("DELETE CONTENT \(txt1)")
+                print("DELETE TITLE \(txt2)")
+                print("DELETE DATE \(txt3)")
+                print("DELETE IMAGE \(txt4)")
                 
-                
+                               
                 context.deleteObject(obj)
                 appDelegate.saveContext()
             }
@@ -211,11 +216,16 @@ class ViewController: UIViewController {
     
     
     @IBAction func tapSave(sender: UIButton) {
+        
 //        writeData(myContent.text!)
 //        writeData(myDate.text!)
 //        writeData(myTitle.text!)
         
         writeData()
+        
+        var targetView: AnyObject = self.storyboard!.instantiateViewControllerWithIdentifier("welcome")
+        self.presentViewController(targetView as! UIViewController, animated: true, completion: nil)
+
         
     }
     
@@ -234,5 +244,34 @@ class ViewController: UIViewController {
     //データ削除をのちにスライドすることで削除するようにつくる
     @IBAction func TapGesture(sender: UITapGestureRecognizer) {
     }
+    
+    @IBAction func tapImageView(sender: UIButton) {
+       
+            
+            // フォトライブラリが使用可能か？
+            if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary) {
+                
+                // フォトライブラリの選択画面を表示
+                let picker = UIImagePickerController()
+                picker.delegate = self
+                picker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+                self.presentViewController(picker, animated: true, completion: nil)
+            }
+        }
+        
+        // 写真選択時に呼ばれる
+        func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+            
+            // 選択した画像を取得
+            if info[UIImagePickerControllerOriginalImage] != nil {
+                if let photo:UIImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+                    myImage.image = photo
+                    assetURL = (info[UIImagePickerControllerReferenceURL]?.description)!
+                }
+            }
+            
+            picker.dismissViewControllerAnimated(true, completion: nil)
+            
+        }
     
 }
