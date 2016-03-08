@@ -22,10 +22,11 @@ class SecondViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        appDelegate.
+
         
        
         //myImageView.image = appDelegate.myImage
+        
         myDate.text = appDelegate.myDate
         myTitle.text = appDelegate.myTitle
         

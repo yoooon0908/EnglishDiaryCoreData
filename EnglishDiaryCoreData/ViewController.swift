@@ -35,15 +35,18 @@ class ViewController: UIViewController , UIImagePickerControllerDelegate, UINavi
         
         //データを読み込む
         //        myContent.text = readData()
+        
         //print(NSBundle.mainBundle())
         
+//        //ファイルの場所を探せる↓
         //#if DEBUG
-            print("----------------------------------");
-            print("[DEBUG]");
-            let documentsPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
-            print(documentsPath)
-            print("----------------------------------");
-        //#endif
+//            print("----------------------------------");
+//            print("[DEBUG]");
+//            let documentsPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
+//            print(documentsPath)
+//            print("----------------------------------");
+//        //#endif
+        
         
         readData()
     }
@@ -67,19 +70,12 @@ class ViewController: UIViewController , UIImagePickerControllerDelegate, UINavi
                 // 検索して見つかったらアップデートする
                 let obj = results[0] as! NSManagedObject
                 
-                               //let ITEM_NAME3 = df.dateFromString(myDate.text!)
-                
                 
                 let txt1 = obj.valueForKey(ITEM_NAME1) as! String
                 let txt2 = obj.valueForKey(ITEM_NAME2) as! String
                 let txt3 = obj.valueForKey(ITEM_NAME3) as! NSDate
                 let txt4 = obj.valueForKey(ITEM_NAME4) as! String
-
                 
-//                obj.setValue(txtData, forKey: ITEM_NAME1)
-//                obj.setValue(txtData, fonrKey: ITEM_NAME2)
-//                obj.setValue(txtData, forKey: ITEM_NAME3)
-
                 
                 obj.setValue(myContent.text, forKey: "content")
                 obj.setValue(myTitle.text, forKey: "title")
@@ -103,14 +99,12 @@ class ViewController: UIViewController , UIImagePickerControllerDelegate, UINavi
                 let entity: NSEntityDescription! = NSEntityDescription.entityForName(ENTITY_NAME, inManagedObjectContext: context)
                 let obj = Data(entity: entity, insertIntoManagedObjectContext: context)
                 
-//                obj.setValue(txtData, forKey: ITEM_NAME1)
-//                obj.setValue(txtData, forKey: ITEM_NAME2)
-//                obj.setValue(txtData, forKey: ITEM_NAME3)
                 
                 obj.setValue(myContent.text, forKey: "content")
                 obj.setValue(myTitle.text, forKey: "title")
                 obj.setValue(df.dateFromString(myDate.text!), forKey: "date")
                 obj.setValue(assetURL, forKey: "image")
+                
                 
                 print("INSERT CONTENT: \(myContent.text)")
                 print("INSERT TITLE: \(myTitle.text)")
@@ -221,12 +215,49 @@ class ViewController: UIViewController , UIImagePickerControllerDelegate, UINavi
 //        writeData(myDate.text!)
 //        writeData(myTitle.text!)
         
-        writeData()
+        //writeData()
         
-        var targetView: AnyObject = self.storyboard!.instantiateViewControllerWithIdentifier("welcome")
-        self.presentViewController(targetView as! UIViewController, animated: true, completion: nil)
+        let df = NSDateFormatter()
+        df.dateFormat = "yyyy/MM/dd"
+        
+
 
         
+        //アラートを出す
+        if df.dateFromString(myDate.text!) == ""  {
+            
+            let alertController = UIAlertController(title: "Please!!", message: "すべての項目を入力してください。", preferredStyle: .Alert)
+            let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+            alertController.addAction(defaultAction)
+            presentViewController(alertController, animated: true, completion: nil)
+            
+        }else if myImage.image == "" {
+            
+                let alertController = UIAlertController(title: "Please!!", message: "すべての項目を入力してください。", preferredStyle: .Alert)
+                let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+                alertController.addAction(defaultAction)
+                presentViewController(alertController, animated: true, completion: nil)
+            
+        }else if myTitle.text == "" {
+            
+                let alertController = UIAlertController(title: "Please!!", message: "すべての項目を入力してください。", preferredStyle: .Alert)
+                let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+                alertController.addAction(defaultAction)
+                presentViewController(alertController, animated: true, completion: nil)
+
+        }else if myContent.text == "" {
+            
+                let alertController = UIAlertController(title: "Please!!", message: "すべての項目を入力してください。", preferredStyle: .Alert)
+                let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+                alertController.addAction(defaultAction)
+                presentViewController(alertController, animated: true, completion: nil)
+
+        }else{
+            
+            var targetView: AnyObject = self.storyboard!.instantiateViewControllerWithIdentifier("welcome")
+            self.presentViewController(targetView as! UIViewController, animated: true, completion: nil)
+        
+        }
     }
     
     
@@ -247,7 +278,6 @@ class ViewController: UIViewController , UIImagePickerControllerDelegate, UINavi
     
     @IBAction func tapImageView(sender: UIButton) {
        
-            
             // フォトライブラリが使用可能か？
             if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary) {
                 
@@ -256,6 +286,7 @@ class ViewController: UIViewController , UIImagePickerControllerDelegate, UINavi
                 picker.delegate = self
                 picker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
                 self.presentViewController(picker, animated: true, completion: nil)
+           
             }
         }
         
